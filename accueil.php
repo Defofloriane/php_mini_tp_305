@@ -16,23 +16,39 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/register.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-<nav >
+<div class="container-fluid tt">
+        <nav >
+        <button type="submit"  class="btn btn-info" ><a href="index.php">Deconnexion</a> </button>
+           <h4></h4>
+           <img src="ICT.jpg" alt="absent" class="icon" />
+           
+          
+         </nav>
+          
+              
+         <h4>Accueil Gestion des etudiants</h4>
+          
+    </div>
+</div>
+<!-- <nav >
 <h1>Accueil</h1>
 
 
   <button type="submit"><a href="index.php">Deconnexion</a> </button>
 </nav>
-<img src="ICT.jpg" alt="absent" class="icon">
+<img src="ICT.jpg" alt="absent" class="icon"> -->
 
 </body>
 
 </html>
 <?php
-echo"accueil";
+
 
 // session_start(); 
 // if(!isset($_SESSION['bienvenue']) )

@@ -6,7 +6,7 @@
 * E-mail : florianekemgne@gmail.com
 ****************************************************************
 * Date de création : 16-11-2022 (16 Novembre 2022)
-* Dernière modification : 16-11-2022 (16 Novembre 2022)
+* Dernière modification : 
 ****************************************************************
 * Historique des modifications
 * 16-11-2022: Le script inscription.php permet de vérifier que les modules  
@@ -24,21 +24,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <script src="scripts.js" ></script>
+
 
 </head>
 <body>
     <div class="container-fluid tt">
         <nav >
            <h1>Gestion des Etudiants</h1>
-
-        <img src="ICT.jpg" alt="absent" class="icon">
-
-            
+          
+           <img src="ICT.jpg" alt="absent" class="icon" />
+           <h3>kdf</h3>
          </nav>
-      
-            <div class="row justify-content-center">
+         <button type="submit" class="btn btn-info" ><a href="index.php">Login</a> </button>
+            <div class = "row justify-content-center ">
                     <form action="enregistrement.php" class="form-container" method="post">
+                        <h2 class="ins">Inscription</h2>
                         <div class="form-group">
                             <label for="name">Nom</label>
                             <input type="text" name="nom" id=" nom"  class="form-control" placeholder="Entrer votre nom" required>
@@ -81,8 +81,13 @@
                            <label  class="form-chexbox-input" for="echeck"> Check  out</label>
                         </div>
                         <div class="vv">
-                        <button type="submit" name="validate"  class="btn btn-info" onclick="matchPassword()" >Submit</button>
-
+                        <button type="submit" name="validate"  class="btn btn-info" onclick="" id="submit">Submit</button>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
                         <button type="reset"  class="btn btn-info btw">Reset</button>
                         </div>
                            
@@ -91,7 +96,6 @@
                 </section>
             </div>
     </div>
-   
-
+ <script src="scripts.js" ></script>
 </body>
 </html>

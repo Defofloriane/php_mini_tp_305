@@ -27,7 +27,7 @@
 <body>
   
 
-   
+
       <div>
             <img src="ICT.jpg" alt="absent" class="icon">
             <form action="verification.php" method="POST"  name="formulaire" >
@@ -46,7 +46,7 @@
                     <input type="submit" name="validate" value="Connexion" class="btn">
                     <br>
                     <br>
-                    <a href="inscription.php"> S'inscrire</a>
+                    <a href="inscription.php" class="btn btn-info"> S'inscrire</a>
                     
                     <a href="journal.php">Journal</a>
                 </fieldset>

@@ -13,16 +13,28 @@
 * 17-11-2022 : Lescript.js 
 * passe avant de le sauvegarder 
 ***************************************************************/ 
-function matchPassword() {  
-    var pw1 = document.getElementById("password").value;  
-    var pw2 = document.getElementById("confirmpassword").value;  
-    if(pw1 != pw2)  
-    {   
-   
-  alert("Mots de passe invalide");
-        
-    } else {  
-      alert("Mots de passe valaides");  
-      
-    }  
-  } 
+
+
+var pw1 = document.getElementById("password");  
+var pw2 = document.getElementById("confirmpassword");  
+console.log("bonjour");
+pw1.addEventListener("change", (e)=>{
+  console.log(e.target.value);
+  pw1 = e.target.value;
+})
+pw2.addEventListener("change", (e)=>{
+  console.log(e.target.value);
+  pw2 = e.target.value;
+})
+var isChecked=false;
+
+let button = document.getElementById('submit');
+button.disabled = true;
+pw2.addEventListener("change", stateHandle);
+function stateHandle() {
+  if ((pw1 != pw2)) {
+    button.disabled = true; 
+  } else {
+    button.disabled = false;
+  }
+}
