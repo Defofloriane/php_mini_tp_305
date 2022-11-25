@@ -30,7 +30,7 @@ if (isset ($_POST['validate']) ) {
     $satut = "Echec - Matricule incorrect";
     $adresse = getIp();
     $date_jr = date('d/m/Y');
-        $sql = "SELECT noms,password_sect,matricule FROM etudiants WHERE matricule='".$mat."' ";
+        $sql = "SELECT noms,prenoms,password_sect,matricule FROM etudiants WHERE matricule='".$mat."' ";
         //$sql = "SELECT noms FROM etudiants WHERE matricule='".$mat."' AND password_sect='".$password."'";
         $req =  $connection->query($sql);
         $result = $req->fetch(PDO::FETCH_ASSOC);
@@ -44,17 +44,23 @@ if (isset ($_POST['validate']) ) {
                     echo "$value1</br>";
                   
                   
-                    //  session_start();
+                  
                     $sql_insert = 'INSERT INTO journal(adresse,date_journal,matricule,statut) VALUES(:adresse, :date_journal, :matricule ,:statut)';
                         $statement = $connection->prepare($sql_insert);
                         if ($statement->execute([':adresse' => $adresse,':date_journal' => $date_jr,':matricule' => $mat,':statut' => $statut])) {
                         echo"insert data dans la table journal";
-                        }    
+                        }   
+                        session_start();
+                        $_SESSION["mat"]= $mat;
+                        $_SESSION["message"] = "Bienvenue Mr/Mme ".$result["noms"]." ".$result["prenoms"]; 
                         header("location: accueil.php");
-                    $value1 = "hello";
+                       $value1 = "hello";
                   
                       }
+                 
+
                 }
+
             }else {
               echo"none result";
               $sql_insert = 'INSERT INTO journal(adresse,date_journal,matricule,statut) VALUES(:adresse, :date_journal, :matricule ,:statut)';

@@ -32,31 +32,24 @@
          </nav>
           
               
-         <h4>Accueil Gestion des etudiants</h4>
+         <h4><?php
+session_start(); 
+if(!isset($_SESSION['message']) )
+{
+header('Location: index.php') ;
+} 
+else
+{
+echo $_SESSION['message'] ;
+ }
+ ?></h4>
           
     </div>
 </div>
-<!-- <nav >
-<h1>Accueil</h1>
-
-
-  <button type="submit"><a href="index.php">Deconnexion</a> </button>
-</nav>
-<img src="ICT.jpg" alt="absent" class="icon"> -->
 
 </body>
 
 </html>
-<?php
 
 
-// session_start(); 
-// if(!isset($_SESSION['bienvenue']) )
-// {
-// header('Location: index.php') ;
-// } 
-// else
-// {
-// echo $_SESSION['bienvenue'] ;
-//  }
- ?>
+

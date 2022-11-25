@@ -52,9 +52,10 @@
                 </fieldset>
             </form>
     </div>
-</body>
-</html>
 <?php
-session_start(); 
+ session_start(); 
  session_destroy()
 ?>
+</body>
+
+</html>
